@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="lol">
+    <H1>Задача:</H1>
+    <H2>Найти минимальную выпуклую оболочку </H2>
+   
+    <div>
+    <div id="ex1"></div>
+    <FORM NAME="Test">
+        <canvas id="canvas" width="1000" height="1000" > Браузер не поддерживает Canvas. Нам очень жаль, но работу кода вы не увидите, попробуйте другой браузер.</canvas>
+        
+    <TABLE>
+        <TR>
+            <TD><B>Количество точек:<B></TD>
+            <TD><INPUT TYPE="text" id = "Point" NAME="Point"></TD>
+        </TR>
+        
+        <TR> 
+            <TD><INPUT TYPE="button" NAME="btStart" VALUE="По Гаусу"
+            onClick="CheckPoint(document.Test.Point.value, 1);"></TD>  
+            <TD><INPUT TYPE="button" NAME="btStart" VALUE="По кругу"
+                onClick="CheckPoint(document.Test.Point.value, 2);"></TD>  
+            <TD><INPUT TYPE="button" NAME="btStart" VALUE="Равномерно"
+                onClick="CheckPoint(document.Test.Point.value, 0);"></TD>  
+        </TR>
+
+        <TR>
+            <TD><output TYPE>МВО алгоритом Джарвиса (красный) и Грэхема (синий)</TD>
+        </TR>
+
+        <TR> 
+            <TD><output TYPE>Время нахождения</TD>
+        </TR>
+        <TR>     
+            <TD><output TYPE="text" id="times1" SIZE=3></TD>
+            <TD><output TYPE="text" id="times2" SIZE=3></TD>
+        </TR>
+    </TABLE>
+    
+    </FORM>
+    <form class="chart__data" action="#" method="POST"></form>
+</body>
+
+</html>
